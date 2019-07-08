@@ -21,11 +21,7 @@ class Dog
   end
 
   def save
-    if self.id
-      self.update
-    else
-      self.insert
-   end
+    
   end
 
   def self.new_from_db(row)
