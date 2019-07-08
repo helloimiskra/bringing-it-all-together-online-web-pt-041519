@@ -21,10 +21,27 @@ class Dog
   end
 
   def save
-    sql = "INSERT INTO dogs (name, breed) VALUES (?, ?);"
+    if self.id
+      self.update
+    else
+      self.insert
+   end
+  end
+
+  def self.new_from_db
+
+  end
+
+  def self.find_by_name(name)
+  end
+
+  def update
+  end
+
+  def insert
+    sql = "INSERT dogs (name, breed) VALUES (?, ?);"
 
     DB[:conn].execute(sql, self.name, self.breed)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
   end
-
 end
