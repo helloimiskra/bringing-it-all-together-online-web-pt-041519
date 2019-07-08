@@ -70,7 +70,6 @@ class Dog
     end
     dog
   end
-  end
 
   def update
     sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
