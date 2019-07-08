@@ -2,7 +2,7 @@ class Dog
 
   attr_accessor :id, :name, :breed
 
-  def initialize (hash)
+  def initialize (name:, breed:)
   end
 
 end
