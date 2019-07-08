@@ -19,7 +19,7 @@ class Dog
 
     DB[:conn].execute(sql)
   end
-
+  
   def save
     if self.id
       self.update
@@ -34,8 +34,6 @@ class Dog
     new_dog.name = row[1]
     new_dog.breed = row[2]
     new_dog
-
-
   end
 
   def self.find_by_name(name)
@@ -44,7 +42,7 @@ class Dog
     Dog.new(result[0], result[1], result[2])
   end
 
-  end
+
 
   def update
   end
