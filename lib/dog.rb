@@ -24,6 +24,7 @@ class Dog
   def save
     if self.id
       self.update
+      self
     else
       sql = "INSERT INTO dogs (name, breed) VALUES (?, ?);"
       DB[:conn].execute(sql, self.name, self.breed)
